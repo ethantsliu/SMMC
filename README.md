@@ -1,1 +1,2 @@
-ASPA: Adaptive Summary-Prompt Answering
+SMMC: Simplifying Multimodal Composition
+
