@@ -1,0 +1,23 @@
+from torch.utils.data import DataLoader, default_collate
+size = 100
+
+with open("/workspace/VQAv2/Questions/v2_OpenEnded_mscoco_val2014_questions.json") as questions:
+    with open("/workspace/VQAv2/Annotations/v2_mscoco_val2014_annotations.json") as annotations:
+        annots = annotations.readlines()
+        annos = json.loads(annots[0])["annotations"]
+        quest = questions.readlines() 
+        qs = json.loads(quest[0])["questions"]
+        valloader = DataLoader(list(zip(annos, qs))[:100], batch_size = 50, shuffle = False, num_workers = 8, collate_fn = default_collate)
+        for batch in valloader:
+            a, q = batch
+            print(a)
+            
+            
+import concurrent.futures
+def aspa_batch(batch):
+    results=[]
+    with concurrent.futures.ThreadPoolExecutor() as e:
+        fut = [e.submit(aspa, image, question) for image, question in batch]
+        for r in concurrent.futures.as_completed(fut):
+            results.append(r.result())
+    return results

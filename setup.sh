@@ -1,7 +1,7 @@
-pip install --upgrade pip
+pip install --upgrade pip tqdm torch torchvision 
 pip install transformers timm fairscale 
 pip install --upgrade openai salesforce-lavis
-pip install word2number 
+pip install word2number num2words tenacity
 pip install decord webdataset opencv-python einops omegaconf pandas iopath spacy pycocoevalcap
 
 conda install -c conda-forge pycocotools
