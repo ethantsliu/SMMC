@@ -1,4 +1,4 @@
-**SMMC: Simplifying Multimodal Composition** 
+# SMMC: Simplifying Multimodal Composition
 
 **Abstract:** In this work, we perform zero-shot image captioning and visual question answering on images using a simple model composition framework, composing the dense image captioning capabilities of a visual language model with the powerful reasoning abilities of a large language model, ChatGPT. The proposed method utilizes zero-shot learning to enable cross-modal integration of vision and language in order to create a comprehensive visual language model. We achieve zero-shot state-of-the-art performance on VQAv2, demonstrating its effectiveness and high accuracy. The method's simplicity makes it highly scalable and adaptable to a wide range of applications, including integration from OpenAI’s multimodal model, GPT-4, with audio language models in the future. The results demonstrate the vast potential of this simple zero-shot framework in improving the accuracy and relevance of vision and language applications, constituting an effective approach to image captioning and visual question answering, as well as future multimodal composition.
 
